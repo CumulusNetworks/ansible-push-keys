@@ -1,13 +1,13 @@
 ---
-- hosts: mgmt
-  user: cumulus
-  become: yes
-  become_method: sudo
-  roles:
-    - mgmt
 - hosts: all
   user: cumulus
   become: yes
   become_method: sudo
   roles:
     - common
+- hosts: mgmt
+  user: cumulus
+  become: yes
+  become_method: sudo
+  roles:
+    - mgmt
