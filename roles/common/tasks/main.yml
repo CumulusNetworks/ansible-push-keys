@@ -1,0 +1,11 @@
+
+
+- name: Ensures ssh dir exists
+  file: path=/home/cumulus/.ssh state=directory mode=0700
+
+- name: copy public keys
+  copy: src=id_rsa.pub dest=/home/cumulus/.ssh/authorized_keys mode=0600
+
+
+- name: copy sudoers
+  copy: src=sudoers dest=/etc/sudoers.d/10_cumulus

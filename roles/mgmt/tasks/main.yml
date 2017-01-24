@@ -1,0 +1,6 @@
+
+- name: Ensures  ssh dir exists
+  file: path=/home/cumulus/.ssh state=directory mode=0700
+
+- name: copy private keys
+  copy: src=id_rsa dest=/home/cumulus/.ssh/id_rsa mode=0600
