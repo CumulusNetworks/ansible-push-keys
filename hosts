@@ -2,13 +2,4 @@
 oob-mgmt-server
 
 [vms]
-leaf01
-leaf02
-leaf03
-leaf04
-server01
-server02
-server03
-server04
-spine01
-spine01
+oob-mgmt-server
