@@ -3,11 +3,13 @@
   user: cumulus
   become: yes
   become_method: sudo
+  gather_facts: False
   roles:
     - common
 - hosts: mgmt
   user: cumulus
   become: yes
   become_method: sudo
+  gather_facts: False
   roles:
     - mgmt
