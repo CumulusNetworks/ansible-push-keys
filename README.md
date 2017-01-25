@@ -1,4 +1,8 @@
 
+Wait until all of the machines have booted. You can quickly check their status
+by running
+
+    for vm in `cat /etc/dhcp/dhcpd.hosts | grep 'host .* {' | cut -d " " -f 2`; do echo "$vm --- " `ping -c 1 $vm | grep transmitted`; done
 
 Run these commands from oob-mgmt-server:
 
