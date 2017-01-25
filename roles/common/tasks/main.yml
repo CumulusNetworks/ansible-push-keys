@@ -1,4 +1,6 @@
 
+- name: Install python
+  raw: apt-get install python -qy
 
 - name: Ensures ssh dir exists
   file: path=/home/cumulus/.ssh state=directory mode=0700
