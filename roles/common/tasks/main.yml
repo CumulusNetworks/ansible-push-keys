@@ -3,10 +3,10 @@
   raw: apt-get install python -qy
 
 - name: Ensures ssh dir exists
-  file: path=/home/cumulus/.ssh state=directory mode=0700
+  file: path=/home/cumulus/.ssh state=directory mode=0700 owner=cumulus group=cumulus
 
 - name: copy public keys
-  copy: src=id_rsa.pub dest=/home/cumulus/.ssh/authorized_keys mode=0600
+  copy: src=id_rsa.pub dest=/home/cumulus/.ssh/authorized_keys mode=0600 owner=cumulus group=cumulus
 
 
 - name: copy sudoers
