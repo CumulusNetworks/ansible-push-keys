@@ -1,5 +1,8 @@
 
 - name: Install python
+  raw: apt-get update
+ 
+- name: Install python
   raw: apt-get install python-minimal -qy
 
 - name: Ensures ssh dir exists
