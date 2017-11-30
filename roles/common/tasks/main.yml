@@ -1,6 +1,6 @@
 
 - name: Install python
-  raw: apt-get install python -qy
+  raw: apt-get install python-minimal -qy
 
 - name: Ensures ssh dir exists
   file: path=/home/cumulus/.ssh state=directory mode=0700 owner=cumulus group=cumulus
